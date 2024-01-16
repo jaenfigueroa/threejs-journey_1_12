@@ -5,7 +5,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 // import typefont from 'three/examples/fonts/helvetiker_regular.typeface.json'
 import { FontLoader } from 'three/examples/jsm/loaders/FontLoader'
 import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry'
-import { numberRandom } from './helpers/numberRandom'
+// import { numberRandom } from './helpers/numberRandom'
 
 /**
  * Base
@@ -28,23 +28,23 @@ const scene = new THREE.Scene()
  */
 const textureLoader = new THREE.TextureLoader()
 
-const texture_matcap_1 = textureLoader.load('/textures/matcaps/1.png')
-const texture_matcap_2 = textureLoader.load('/textures/matcaps/2.png')
-const texture_matcap_3 = textureLoader.load('/textures/matcaps/3.png')
-const texture_matcap_4 = textureLoader.load('/textures/matcaps/4.png')
-const texture_matcap_5 = textureLoader.load('/textures/matcaps/5.png')
-const texture_matcap_6 = textureLoader.load('/textures/matcaps/6.png')
-const texture_matcap_7 = textureLoader.load('/textures/matcaps/7.png')
-const texture_matcap_8 = textureLoader.load('/textures/matcaps/8.png')
+// const texture_matcap_1 = textureLoader.load('../static/textures/matcaps/1.png')
+// const texture_matcap_2 = textureLoader.load('../static/textures/matcaps/2.png')
+// const texture_matcap_3 = textureLoader.load('../static/textures/matcaps/3.png')
+// const texture_matcap_4 = textureLoader.load('../static/textures/matcaps/4.png')
+// const texture_matcap_5 = textureLoader.load('../static/textures/matcaps/5.png')
+// const texture_matcap_6 = textureLoader.load('../static/textures/matcaps/6.png')
+// const texture_matcap_7 = textureLoader.load('../static/textures/matcaps/7.png')
+// const texture_matcap_8 = textureLoader.load('../static/textures/matcaps/8.png')
 
-texture_matcap_1.colorSpace = THREE.SRGBColorSpace
-texture_matcap_2.colorSpace = THREE.SRGBColorSpace
-texture_matcap_3.colorSpace = THREE.SRGBColorSpace
+// texture_matcap_1.colorSpace = THREE.SRGBColorSpace
+// texture_matcap_2.colorSpace = THREE.SRGBColorSpace
+// texture_matcap_3.colorSpace = THREE.SRGBColorSpace
 texture_matcap_4.colorSpace = THREE.SRGBColorSpace
-texture_matcap_5.colorSpace = THREE.SRGBColorSpace
-texture_matcap_6.colorSpace = THREE.SRGBColorSpace
-texture_matcap_7.colorSpace = THREE.SRGBColorSpace
-texture_matcap_8.colorSpace = THREE.SRGBColorSpace
+// texture_matcap_5.colorSpace = THREE.SRGBColorSpace
+// texture_matcap_6.colorSpace = THREE.SRGBColorSpace
+// texture_matcap_7.colorSpace = THREE.SRGBColorSpace
+// texture_matcap_8.colorSpace = THREE.SRGBColorSpace
 
 /* fonts */
 
@@ -52,7 +52,7 @@ const fontLoader = new FontLoader()
 
 // prettier-ignore
 fontLoader.load(
-  '/fonts/helvetiker_regular.typeface.json',
+  '../static/fonts/helvetiker_regular.typeface.json',
   (font) => {
     const textGeometry = new TextGeometry(
       'Jaen Figueroa',
