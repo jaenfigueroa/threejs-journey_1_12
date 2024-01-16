@@ -106,18 +106,18 @@ fontLoader.load(
 
     const donaGeometry = new THREE.TorusGeometry(0.3, 0.2, 20, 45)
 
-    for (let i = 0; i < 1000; i++) {
+    for (let i = 0; i < 500; i++) {
 
       const dona = new THREE.Mesh(donaGeometry, material)
 
-      dona.position.x = (Math.random() - 0.5) * 30
-      dona.position.y = (Math.random() - 0.5) * 30
-      dona.position.z = (Math.random() - 0.5) * 30
+      dona.position.x = (Math.random() - 0.5) * 20
+      dona.position.y = (Math.random() - 0.5) * 20
+      dona.position.z = (Math.random() - 0.5) * 20
 
       dona.rotation.x = Math.random() * Math.PI
       dona.rotation.y = Math.random() * Math.PI
 
-      dona.scale.setScalar(numberRandom(0.7,1))
+      // dona.scale.setScalar(numberRandom(0.7,1))
 
       scene.add(dona)
     }
