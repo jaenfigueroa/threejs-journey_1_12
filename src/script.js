@@ -1,6 +1,6 @@
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
-import GUI from 'lil-gui'
+// import GUI from 'lil-gui'
 
 // import typefont from 'three/examples/fonts/helvetiker_regular.typeface.json'
 import { FontLoader } from 'three/examples/jsm/loaders/FontLoader'
@@ -11,7 +11,7 @@ import { numberRandom } from './helpers/numberRandom'
  * Base
  */
 // Debug
-const gui = new GUI()
+// const gui = new GUI()
 
 // Canvas
 const canvas = document.querySelector('canvas.webgl')
