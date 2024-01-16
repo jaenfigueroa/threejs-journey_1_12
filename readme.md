@@ -12,6 +12,8 @@ Centrar textos
 
 ![Alt text](/public/image-4.png)
 
-Donas al azar
+Donas al azar, ojo que la geometry y el material crear una sola vez fuera del for
 
 ![Alt text](/public/image-5.png)
+![Alt text](/public/image-6.png)
+![Alt text](/public/image-7.png)

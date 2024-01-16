@@ -5,6 +5,7 @@ import GUI from 'lil-gui'
 // import typefont from 'three/examples/fonts/helvetiker_regular.typeface.json'
 import { FontLoader } from 'three/examples/jsm/loaders/FontLoader'
 import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry'
+import { numberRandom } from './helpers/numberRandom'
 
 /**
  * Base
@@ -89,33 +90,39 @@ fontLoader.load(
     // const material = new THREE.MeshBasicMaterial()
     // material.wireframe = true
 
-    // const material = new THREE.MeshNormalMaterial({map: texture})
+    // const material = new THREE.MeshNormalMaterial()
 
     const material = new THREE.MeshMatcapMaterial()
     material.matcap = texture_matcap_4
+
+    /*  */
 
     const text = new THREE.Mesh(textGeometry, material)
     scene.add(text)
     
     /* AGREGAR DONAS A AZAR */
 
-    for (let i = 0; i < 100; i++) {
+    console.time('donas')
 
-      const donaGeometry = new THREE.TorusGeometry(0.3, 0.2, 20, 45)
-      const donaMaterial = new THREE.MeshMatcapMaterial()
-      donaMaterial.matcap = texture_matcap_4
+    const donaGeometry = new THREE.TorusGeometry(0.3, 0.2, 20, 45)
 
-      const dona = new THREE.Mesh(donaGeometry, donaMaterial)
+    for (let i = 0; i < 1000; i++) {
 
-      dona.position.x = (Math.random() - 0.5) * 10
-      dona.position.y = (Math.random() - 0.5) * 10
-      dona.position.z = (Math.random() - 0.5) * 10
+      const dona = new THREE.Mesh(donaGeometry, material)
+
+      dona.position.x = (Math.random() - 0.5) * 30
+      dona.position.y = (Math.random() - 0.5) * 30
+      dona.position.z = (Math.random() - 0.5) * 30
 
       dona.rotation.x = Math.random() * Math.PI
       dona.rotation.y = Math.random() * Math.PI
 
+      dona.scale.setScalar(numberRandom(0.7,1))
+
       scene.add(dona)
     }
+
+    console.timeEnd('donas')
 
   }
 )
@@ -175,10 +182,10 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 /**
  * Animate
  */
-const clock = new THREE.Clock()
+// const clock = new THREE.Clock()
 
 const tick = () => {
-  const elapsedTime = clock.getElapsedTime()
+  // const elapsedTime = clock.getElapsedTime()
 
   // Update controls
   controls.update()
